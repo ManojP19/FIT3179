@@ -18,6 +18,61 @@
   },
   "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
   },
+   {
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/USAtopnoHnA.json", "format": {"type":"topojson", "feature": "OK"}
+  },
+  
+  "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
+  },
+  {
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/USAtopnoHnA.json", "format": {"type":"topojson", "feature": "NY"}
+  },
+  "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
+  },
+  {
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/USAtopnoHnA.json", "format": {"type":"topojson", "feature": "TX"}
+  },
+  "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
+  },
+  {
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/USAtopnoHnA.json", "format": {"type":"topojson", "feature": "WY"}
+  },
+  "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
+  },
+  {
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/USAtopnoHnA.json", "format": {"type":"topojson", "feature": "WA"}
+  },
+  "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
+  },
+  {
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/USAtopnoHnA.json", "format": {"type":"topojson", "feature": "OR"}
+  },
+  "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
+  },
+  {
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/USAtopnoHnA.json", "format": {"type":"topojson", "feature": "AZ"}
+  },
+  "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
+  },
+  {
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/USAtopnoHnA.json", "format": {"type":"topojson", "feature": "NM"}
+  },
+  "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
+  },
+  {
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/USAtopnoHnA.json", "format": {"type":"topojson", "feature": "MN"}
+  },
+  "mark": {"type":"geoshape", "fill": "lightgray", "stroke": "white"}
+  },
   {
     "data": {
       "url": "https://manojp19.github.io/FIT3179/data/2018_all_tornadoes.csv"},
