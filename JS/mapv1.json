@@ -25,15 +25,16 @@
  "type": "circle",
  "tooltip": {"content": "data"}
  },
- "encoding": {
- "size": {"field": "wid",
+"encoding": {
+ "size": {"field": "Diameter (m)",
  "type": "quantitative",
  "scale": {
- "domain": [100, 3000]
+ "domain": [10, 2000]
  }},
- "color": {"field": "PropertyDamage",
+ "color": {"field": "Property Damage (USD)",
  "type": "quantitative",
- "scale":{
+ "scale":{ "type": "log",
+ "domain": [1,100000000],
  "scheme":"blues"
  }
  }
