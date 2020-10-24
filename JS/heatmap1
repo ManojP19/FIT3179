@@ -1,43 +1,50 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {
-      "url": "data/seattle-weather.csv"
+      "url": "https://manojp19.github.io/FIT3179/data/tornado_monthly_count.csv"
   },
-  "title": "Daily Max Temperatures (C) in Seattle, WA",
+  "title": "Monthly Tornado Count in US",
   "config": {
       "view": {
           "strokeWidth": 0,
-          "step": 13
+          "step": 14
       },
       "axis": {
           "domain": false
       }
   },
-  "mark": "rect",
   "encoding": {
       "x": {
-          "field": "date",
-          "timeUnit": "date",
+          "field": "Date",
+          "timeUnit": "year",
           "type": "ordinal",
-          "title": "Day",
+          "title": "Year",
           "axis": {
-              "labelAngle": 0,
-              "format": "%e"
+              "labelAngle": 90
           }
       },
       "y": {
-          "field": "date",
+          "field": "Date",
           "timeUnit": "month",
           "type": "ordinal",
           "title": "Month"
       },
-      "color": {
-          "field": "temp_max",
+      
+      "tooltip": {"field": "Count"}
+  },
+  "layer": [{
+    "mark": "rect",
+    "encoding": {
+    "color": {
+          "field": "Count",
           "aggregate": "max",
           "type": "quantitative",
           "legend": {
-              "title": null
-          }
+              "title": "Number"
+          },
+          "scale": {"type": "log", "domain": [0.1,60,783]}
       }
-  }
+    }
+  }]
+  
 }
