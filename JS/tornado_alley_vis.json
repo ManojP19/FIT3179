@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Tornado Alley",
+  "data": {
+    "url": "https://manojp19.github.io/FIT3179/data/tornado_alleyv2.csv"
+  },
+  "params": [{
+    "name": "year_select",
+    "value": 2018,
+    "bind":{
+      "input": "range",
+      "min": 1950,
+      "max": 2018,
+      "step": 1
+    }
+  }],
+  "vconcat": [
+    {
+      "encoding": {
+        "color": {
+          "condition": {
+            "selection": "brush",
+            "title": "State",
+            "field": "State",
+            "type": "nominal",
+            "scale": {
+              "domain": ["IA", "KS", "LA", "NE", "OK", "SD", "TX"],
+              "range": ["#e7ba52", "#a7d7a7", "#aec7e8", "#1f77b4", "#9467bd", "#7d1a12", "#0d08f2"]
+            }
+          },
+          "value": "lightgray"
+        },
+        "size": {
+          "title": "Magnitude",
+          "field": "Magnitude",
+          "scale": {"domain": [0, 5]},
+          "type": "quantitative"
+        },
+        "x": {
+          "field": "Date",
+          "timeUnit": "month",
+          "scale": {"type": "ordinal", "domain": ["Jan","Dec"]},
+          "title": "Date",
+          "axis": {"labelAngle": 45}
+        },
+        "y": {
+          "title": "Total Injuries & Fatalities",
+          "field": "Total",
+          "scale": {"domain": [0, 200]},
+          "type": "quantitative"
+        },
+        "tooltip":{"field": "Total"}
+      },
+      "width": 600,
+      "height": 300,
+      "mark": "circle",
+      "selection": {"brush": {"encodings": ["x"], "type": "interval"}},
+      "transform": [{"filter": {"selection": "click"}}, 
+      {"filter": "datum.Year < year_select + 1"},
+      {"filter": "datum.Year > year_select - 1"} ]
+    },
+    {
+      "encoding": {
+        "color": {
+          "condition": {
+            "selection": "click",
+            "field": "State",
+            "scale": {
+              "domain": ["IA", "KS", "LA", "NE", "OK", "SD", "TX"],
+              "range": ["#e7ba52", "#a7d7a7", "#aec7e8", "#1f77b4", "#9467bd", "#7d1a12", "#0d08f2"]
+            }
+          },
+          "value": "lightgray"
+        },
+        "x": {"aggregate": "count", "scale": {"domain": [0,250]}},
+        "y": {"title": "State", "field": "State", "scale": {"domain": ["IA", "KS", "LA", "NE", "OK", "SD", "TX"]}}
+      },
+      "width": 600,
+      "mark": "bar",
+      "selection": {"click": {"encodings": ["color"], "type": "multi"}},
+      "transform": [{"filter": {"selection": "brush"}}, 
+      {"filter": "datum.Year < year_select + 1"},
+      {"filter": "datum.Year > year_select - 1"}]
+    }
+  ]
+}
+
