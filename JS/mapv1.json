@@ -1,9 +1,8 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": "800",
   "height": "400",
-"title": "Tornadoes in US",
+"title": "Tornadoes in USA",
 "projection": {"type": "mercator"},
 "layer": [
   {
@@ -14,10 +13,10 @@
   },
   {
     "data": {
-      "url": "https://manojp19.github.io/FIT3179/data/2018_all_tornadoes.csv"},
+      "url": "https://manojp19.github.io/FIT3179/data/map_data.csv"},
       "encoding": {
-        "longitude": {"field": "slon", "type":"quantitative"},
-        "latitude": {"field": "slat", "type":"quantitative"}
+        "longitude": {"field": "Start Longitude", "type":"quantitative"},
+        "latitude": {"field": "Start Latitude", "type":"quantitative"}
       },
       "layer": [
         {
@@ -25,7 +24,7 @@
  "type": "circle",
  "tooltip": {"content": "data"}
  },
-"encoding": {
+ "encoding": {
  "size": {"field": "Diameter (m)",
  "type": "quantitative",
  "scale": {
