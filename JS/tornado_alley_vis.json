@@ -33,23 +33,22 @@
         "size": {
           "title": "Magnitude",
           "field": "Magnitude",
-          "scale": {"domain": [0, 5]},
+          "scale": {"domain": [-1, 5], "type": "sqrt"},
           "type": "quantitative"
         },
         "x": {
           "field": "Date",
-          "timeUnit": "month",
-          "scale": {"type": "ordinal", "domain": ["Jan","Dec"]},
+          "timeUnit": "monthdate",
           "title": "Date",
           "axis": {"labelAngle": 45}
         },
         "y": {
           "title": "Total Injuries & Fatalities",
           "field": "Total",
-          "scale": {"domain": [0, 200]},
+          "scale": {"domain": [0,200]},
           "type": "quantitative"
         },
-        "tooltip":{"field": "Total"}
+        "tooltip":[{"field": "Total"}]
       },
       "width": 600,
       "height": 300,
@@ -57,7 +56,8 @@
       "selection": {"brush": {"encodings": ["x"], "type": "interval"}},
       "transform": [{"filter": {"selection": "click"}}, 
       {"filter": "datum.Year < year_select + 1"},
-      {"filter": "datum.Year > year_select - 1"} ]
+      {"filter": "datum.Year > year_select - 1"},
+      {"filter": "datum.Magnitude > -1"}]
     },
     {
       "encoding": {
