@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Tornado Alley",
+  "title": "Tornados in the Tornado Alley",
   "data": {
-    "url": "https://manojp19.github.io/FIT3179/data/tornado_alleyv2.csv"
+    "url": "https://manojp19.github.io/FIT3179/data/tornado_alleyv3.csv"
   },
   "params": [{
     "name": "year_select",
@@ -11,7 +11,8 @@
       "input": "range",
       "min": 1950,
       "max": 2018,
-      "step": 1
+      "step": 1,
+      "name": "Select Year:"
     }
   }],
   "vconcat": [
@@ -25,7 +26,7 @@
             "type": "nominal",
             "scale": {
               "domain": ["IA", "KS", "LA", "NE", "OK", "SD", "TX"],
-              "range": ["#e7ba52", "#a7d7a7", "#aec7e8", "#1f77b4", "#9467bd", "#7d1a12", "#0d08f2"]
+              "range": ["#2dc0e0", "#6ef798", "#a07872" , "#e7ba52", "#1f77b4", "#0000e7", "#8937ed"]
             }
           },
           "value": "lightgray"
@@ -43,12 +44,15 @@
           "axis": {"labelAngle": 45}
         },
         "y": {
-          "title": "Total Injuries & Fatalities",
-          "field": "Total",
-          "scale": {"domain": [0,200]},
+          "title": "Distance Travelled (km)",
+          "field": "Travel (km)",
+          "scale": {"type": "sqrt", "domain": [0,300]},
           "type": "quantitative"
         },
-        "tooltip":[{"field": "Total"}]
+        "tooltip":[{"field": "State"},
+                   {"field": "Magnitude"},
+                   {"field": "Travel (km)"},
+                   {"field": "Injuries/Fatalities"}]
       },
       "width": 500,
       "height": 250,
