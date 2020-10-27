@@ -41,7 +41,7 @@
           "legend": {
               "title": "Number"
           },
-          "scale": {"type": "log", "domain": [0.1, 70, 800]}
+          "scale": {"type": "log", "domain": [0.1, 50, 800]}
       }
     }
   },
@@ -54,7 +54,17 @@
     "encoding": {
       "text": {"field": "Count"}
     },
-    "transform": [{"filter":"datum.Count>300"}]
+    "transform": [{"filter":"datum.Count>300"}],
+  {
+    "mark": {
+      "type": "text",
+      "fontSize": 8,
+      "color": "black"
+    },
+    "encoding": {
+      "text": {"field": "Count","format": ".0f"}
+    },
+    "transform": [{"filter":"datum.Count<6"}]
   }]
   
 }
