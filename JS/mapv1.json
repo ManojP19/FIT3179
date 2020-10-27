@@ -21,10 +21,11 @@
       "layer": [
         {
  "mark": {
- "type": "circle",
- "tooltip": {"content": "data"}
+ "type": "circle"
  },
  "encoding": {
+ "tooltip": [{"field": "State"},{"field": "Diameter (m)"},
+             {"field": "Property Damage (USD)"}],
  "size": {"field": "Diameter (m)",
  "type": "quantitative",
  "scale": {
