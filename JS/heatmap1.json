@@ -6,8 +6,8 @@
   "title": "Monthly Tornado Count in US",
   "config": {
       "view": {
-          "strokeWidth": 0,
-          "step": 14
+          "strokeWidth": 3,
+          "step": 15
       },
       "axis": {
           "domain": false
@@ -20,7 +20,7 @@
           "type": "ordinal",
           "title": "Year",
           "axis": {
-              "labelAngle": 0
+              "labelAngle": 45
           }
       },
       "y": {
@@ -29,22 +29,32 @@
           "type": "ordinal",
           "title": "Month"
       },
-      
-      "tooltip": {"field": "Count"}
+      "tooltip": [{"field": "Count"}]
   },
   "layer": [{
     "mark": "rect",
     "encoding": {
     "color": {
           "field": "Count",
-          "aggregate": "max",
+          "aggregate": "sum",
           "type": "quantitative",
           "legend": {
               "title": "Number"
           },
-          "scale": {"type": "log", "domain": [0.1,783]}
+          "scale": {"type": "log", "domain": [0.1, 70, 800]}
       }
     }
+  },
+  {
+    "mark": {
+      "type": "text",
+      "fontSize": 8,
+      "color": "white"
+    },
+    "encoding": {
+      "text": {"field": "Count"}
+    },
+    "transform": [{"filter":"datum.Count>300"}]
   }]
   
 }
