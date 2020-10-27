@@ -54,7 +54,8 @@
     "encoding": {
       "text": {"field": "Count"}
     },
-    "transform": [{"filter":"datum.Count>300"}],
+    "transform": [{"filter":"datum.Count>300"}]
+  },
   {
     "mark": {
       "type": "text",
