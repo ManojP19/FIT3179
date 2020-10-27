@@ -50,8 +50,8 @@
         },
         "tooltip":[{"field": "Total"}]
       },
-      "width": 600,
-      "height": 300,
+      "width": 500,
+      "height": 250,
       "mark": "circle",
       "selection": {"brush": {"encodings": ["x"], "type": "interval"}},
       "transform": [{"filter": {"selection": "click"}}, 
@@ -75,7 +75,7 @@
         "x": {"aggregate": "count", "scale": {"domain": [0,250]}},
         "y": {"title": "State", "field": "State", "scale": {"domain": ["IA", "KS", "LA", "NE", "OK", "SD", "TX"]}}
       },
-      "width": 600,
+      "width": 500,
       "mark": "bar",
       "selection": {"click": {"encodings": ["color"], "type": "multi"}},
       "transform": [{"filter": {"selection": "brush"}}, 
