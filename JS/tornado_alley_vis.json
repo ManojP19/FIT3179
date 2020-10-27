@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Tornados in the Tornado Alley",
+  "title": "Yearly Tornados in the Tornado Alley",
   "data": {
     "url": "https://manojp19.github.io/FIT3179/data/tornado_alleyv3.csv"
   },
