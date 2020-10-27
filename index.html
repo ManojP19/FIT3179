@@ -73,11 +73,35 @@
           </div>
         </div>
         <div class="pure-u-1-1">
+          <div id="vis3" class="vis-container"></div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+   
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div class="description description-left">
+            <h2>Vis 1 - Map</h2>
+            <p>This is a map.</p>
+          </div>
+        </div>
+        <div class="pure-u-1-1">
           <div id="vis1" class="vis-container"></div>
         </div>
     </div>
     <!-- end pure grid group -->
    
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description description-left">
+          <h2>TORNADO ALLEY</h2>
+        </div>
+      </div>
+   </div>
+   <!-- end pure grid group -->
+      
    <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-2-3">
@@ -103,7 +127,8 @@
       </div>
         <div class="pure-u-1-3">
           <div class="description description-left">
-            <p>Tornado Alley is the name given to a group of states (shown in the chart on the left) where most of the tornados in the country occur. This is because of its location as hot and cool winds more frequently meet to eventually form tornados. When filtering to a state, vertical lines of circles appear on the cchart. This is because tornadoes often form in clusters.</p>
+            <p>Tornado Alley is the name given to a group of states (shown in the chart on the left) where most of the tornados in the country occur. This is because of its location as hot and cool winds more frequently meet to eventually form tornados.\nWhen filtering to a state, vertical lines of circles appear on the cchart. This is because tornadoes often form in clusters.</p>
+            <p>Does htlm allow this</p>
           </div>
         </div>
         <div class="pure-u-2-3">
@@ -127,6 +152,10 @@
   }).catch(console.error);
   
    vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
