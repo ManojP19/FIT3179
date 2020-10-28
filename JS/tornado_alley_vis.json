@@ -41,7 +41,7 @@
           "field": "Date",
           "timeUnit": "monthdate",
           "title": "Date",
-          "axis": {"labelAngle": 45}
+          "axis": {"labelAngle": 45,"format":"%b"}
         },
         "y": {
           "title": "Distance Travelled (km)",
