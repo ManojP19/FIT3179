@@ -29,7 +29,7 @@
           "type": "ordinal",
           "title": "Month"
       },
-      "tooltip": [{"field": "Count"}]
+      "tooltip": [{"field": "Count","format": ".0f"}]
   },
   "layer": [{
     "mark": "rect",
