@@ -26,7 +26,7 @@
             "type": "nominal",
             "scale": {
               "domain": ["IA", "KS", "LA", "NE", "OK", "SD", "TX"],
-              "range": ["#2dc0e0", "#6ef798", "#a07872" , "#e7ba52", "#1f77b4", "#0000e7", "#8937ed"]
+              "range": ["#2dc0e0", "#6ef798", "#a07872" , "#e7ba52", "#1f77b4", "#1330ff", "#a297fd"]
             }
           },
           "value": "lightgray"
@@ -34,8 +34,8 @@
         "size": {
           "title": "Magnitude",
           "field": "Magnitude",
-          "scale": {"domain": [-1, 5], "type": "sqrt"},
-          "type": "quantitative"
+          "scale": {"domain": [0,1,2,3,4,5]},
+          "type": "ordinal"
         },
         "x": {
           "field": "Date",
@@ -71,7 +71,7 @@
             "field": "State",
             "scale": {
               "domain": ["IA", "KS", "LA", "NE", "OK", "SD", "TX"],
-              "range": ["#e7ba52", "#a7d7a7", "#aec7e8", "#1f77b4", "#9467bd", "#7d1a12", "#0d08f2"]
+              "range": ["#2dc0e0", "#6ef798", "#a07872" , "#e7ba52", "#1f77b4", "#1330ff", "#a297fd"]
             }
           },
           "value": "lightgray"
