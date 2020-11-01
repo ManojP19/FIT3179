@@ -21,11 +21,11 @@
       "layer": [
         {
  "mark": {
- "type": "circle"
+ "type": "circle","stroke": "darkblue","strokeWidth":0.2
  },
  "encoding": {
  "tooltip": [{"field": "State"},{"field": "Diameter (m)"},
-             {"field": "Property Damage (USD)"}],
+             {"field": "Property Damage (USD)", "format": "$.0f"}}],
  "size": {"field": "Diameter (m)",
  "type": "quantitative",
  "scale": {
@@ -34,8 +34,8 @@
  "color": {"field": "Property Damage (USD)",
  "type": "quantitative",
  "scale":{ "type": "log",
- "domain": [1,100000000],
- "scheme":"blues"
+ "domain": [0.1,10,100,1000,10000,100000,1000000,10000000,100000000],
+  "range": ["#ffffe9","#ddf1b1","#c7d9c4","#7ac8bb","#3da6bf","#1981bd","#1d5aa3","#213090","#071348"]
  }
  }
  }
