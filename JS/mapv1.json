@@ -25,7 +25,7 @@
  },
  "encoding": {
  "tooltip": [{"field": "State"},{"field": "Diameter (m)"},
-             {"field": "Property Damage (USD)", "format": "$.0f"}}],
+             {"field": "Property Damage (USD)", "format": "$.0f"}],
  "size": {"field": "Diameter (m)",
  "type": "quantitative",
  "scale": {
